@@ -57,7 +57,7 @@ class BaseExceptionModel(models.AbstractModel):
                     [
                         f"<li>{html.escape(e.name)}: <i>{html.escape(e.description or '')}</i> <b>"
                         + _(
-                            "{'(Blocking exception)' if e.is_blocking else ''}</b></li>"
+                            f"{'(Blocking exception)' if e.is_blocking else ''}</b></li>"
                         )
                         for e in rec.exception_ids
                     ]
